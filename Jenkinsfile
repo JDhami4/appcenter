@@ -19,7 +19,7 @@ pipeline {
                     appName: 'BusinessHub-Connect-MacOS',
                     pathToApp: 'emptyfile.dmg',
                     distributionGroups: 'Collaborators',
-                    buildVersion: '1.0',
+                    buildVersion: '1.0'
             }
         }
     }
