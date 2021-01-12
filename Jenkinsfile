@@ -18,7 +18,7 @@ pipeline {
                     ownerName: 'T-Mobile-USA-Inc.',
                     appName: 'BusinessHub-Connect-MacOS',
                     pathToApp: 'emptyfile.dmg',
-                    distributionGroups: 'Ovidiu Parasca',
+                    distributionGroups: 'Collaborators',
                     buildVersion: '1.0'
             }
         }
