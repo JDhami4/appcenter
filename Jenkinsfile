@@ -20,7 +20,6 @@ pipeline {
                     pathToApp: 'emptyfile.dmg',
                     distributionGroups: 'Collaborators',
                     buildVersion: '1.0',
-                    buildNumber: '1.0.1'
             }
         }
     }
