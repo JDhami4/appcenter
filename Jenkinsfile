@@ -1,18 +1,17 @@
 pipeline {
     agent any
-    
+    environment {
+        APPCENTER_API_TOKEN = credentials('appcenter-api-token')
+    }
     tools {nodejs "node"}
     
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'appcenter apps list'
             }
         }
         stage('Publish') {
-            environment {
-                APPCENTER_API_TOKEN = credentials('appcenter-api-token')
-            }
             steps {
                 appCenter apiToken: APPCENTER_API_TOKEN,
                     ownerName: 'T-Mobile-USA-Inc.',
