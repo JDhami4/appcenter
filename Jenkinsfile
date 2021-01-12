@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'appcenter apps list'
+                sh 'appcenter apps list --token $APPCENTER_API_TOKEN'
             }
         }
         stage('Publish') {
