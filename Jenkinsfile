@@ -13,12 +13,7 @@ pipeline {
         }
         stage('Publish') {
             steps {
-                appCenter apiToken: APPCENTER_API_TOKEN,
-                    ownerName: 'T-Mobile-USA-Inc.',
-                    appName: 'BusinessHub-Connect-MacOS',
-                    pathToApp: 'emptyfile.dmg',
-                    distributionGroups: 'Collaborators',
-                    buildVersion: '1.0'
+                sh 'appcenter distribute release -f emptyfile.dmg --build-number 1.0.1 --build-version 1.0 --group Collaborators'
             }
         }
     }
