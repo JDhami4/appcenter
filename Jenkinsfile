@@ -18,7 +18,7 @@ pipeline {
                     ownerName: 'T-Mobile-USA-Inc.',
                     appName: 'BusinessHub-Connect-MacOS',
                     pathToApp: 'emptyfile.dmg',
-                    distributionGroups: 'Collaborators',
+                    distributionGroups: 'BHC-Devs',
                     buildVersion: '1.0'
             }
         }
