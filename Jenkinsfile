@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh 'node --version'
             }
+        }
         stage('Publish') {
             environment {
                 APPCENTER_API_TOKEN = credentials('cf9c28894bac2849aa78ed47e71198fc95799d30')
