@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Publish') {
             steps {
-                sh 'appcenter distribute release -f emptyfile.dmg --build-number 1.0.1 --build-version 3.0 --group Collaborators'
+                sh 'appcenter distribute release -f emptyfile.dmg --build-number 1.0.1 --build-version 3.0 --group Collaborators --token $APPCENTER_API_TOKEN'
             }
         }
     }
