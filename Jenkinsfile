@@ -22,6 +22,7 @@ pipeline {
         }
         stage('Publish') {
             steps {
+                echo "publish step"
 //                sh 'appcenter distribute release -f emptyfile.dmg --build-number 1.0.1 --build-version 3.0 --group Collaborators --token $APPCENTER_API_TOKEN --app T-Mobile-USA-Inc./BusinessHub-Connect-MacOS' 
             }
         }
