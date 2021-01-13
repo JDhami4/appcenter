@@ -14,6 +14,9 @@ pipeline {
                     string(name: 'PATH_TO_BUILD', defaultValue: '', description: 'Path to the dmg file, relative to the root of the repo')
                 }
             }
+            steps {
+                echo "${PATH_TO_BUILD}"
+            }
         }
         stage('Test') {
             steps {
