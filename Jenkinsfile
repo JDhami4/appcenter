@@ -12,10 +12,11 @@ pipeline {
                 ok 'Done!'
                 parameters {
                     string(name: 'PATH_TO_BUILD', defaultValue: '', description: 'Path to the dmg file, relative to the root of the repo')
+                    choice(name: 'APP_NAME', choices: "prod, debug", description: 'app name in app-center')
                 }
             }
             steps {
-                echo "${PATH_TO_BUILD}"
+                echo "${PATH_TO_BUILD} ${APP_NAME}"
             }
         }
         stage('Test') {
