@@ -13,8 +13,8 @@ pipeline {
                 parameters {
                     string(name: 'PATH_TO_BUILD', defaultValue: '', description: 'Path to the dmg file, relative to the root of the repo'),
                     choice(name: 'APP_NAME', choices: ["T-Mobile-USA-Inc./BusinessHub-Connect-MacOS","T-Mobile-USA-Inc./BusinessHub-Connect-Win"], description: 'The name of the application (in app-center)'),
-                    string(name: 'BUILD_NUMBER', defaultValue: '', description: 'Number string for the build')
-                    string(name: 'BUILD_VERSION', defaultValue: '', description: 'Version string for the build')
+                    string(name: 'BUILD_NUMBER', defaultValue: '', description: 'Number string for the build'),
+                    string(name: 'BUILD_VERSION', defaultValue: '', description: 'Version string for the build'),
                     string(name: 'DISTRIBUTION_GROUPS', defaultValue: '', description: 'Comma seprated list of distribution Groups')
                 }
             }
