@@ -19,7 +19,10 @@ pipeline {
                 }
             }
             steps {
-                sh 'appcenter distribute release -f $PATH_TO_BUILD --build-number $BUILD_NUMBER --build-version $BUILD_VERSION --group $DISTRIBUTION_GROUPS --app $APP_NAME --token $APPCENTER_API_TOKEN' 
+                script { 
+                    sh "appcenter distribute release -f $PATH_TO_BUILD --build-number $BUILD_NUMBER --build-version $BUILD_VERSION --group $DISTRIBUTION_GROUPS --app $APP_NAME --token $APPCENTER_API_TOKEN" 
+                }
+
             }
         }
         stage('Test') {
